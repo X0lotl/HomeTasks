@@ -7,10 +7,12 @@ public class Student {
         this._lastname = lastname;
     }
 
-    void printStudent10Times() {
+    String printStudent10Times() {
+        String name ="";
         for (int i = 0; i < 10; i++) {
-            System.out.printf("%s %s\n", this._firstname, this._lastname);
+            name += this._firstname + " " + this._lastname + " \n";
         }
+        return (name);
     }
 
     void squaresTable() {
@@ -20,7 +22,7 @@ public class Student {
         }
     }
 
-    void sumNFirst(int n) {
+    void sumNFirst(int n)   {
         int sum = 0;
         for (int i = 0; i <= n; i++) {
             sum += i;
