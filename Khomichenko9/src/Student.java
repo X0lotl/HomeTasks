@@ -1,3 +1,7 @@
+import javafx.util.Pair;
+
+import java.util.ArrayList;
+
 public class Student {
     private final String _firstname;
     private final String _lastname;
@@ -8,77 +12,85 @@ public class Student {
     }
 
     String printStudent10Times() {
-        String name ="";
+        String name = "";
         for (int i = 0; i < 10; i++) {
             name += this._firstname + " " + this._lastname + " \n";
         }
         return (name);
     }
 
-    void squaresTable() {
+    String squaresTable() {
+        String result = "";
         for (int i = 1; i <= 5; i++) {
             int number = ((i * 2) - 1);
-            System.out.printf("%d^2 = %d \n", number, number * number);
+            result += number + "^2 = " + Math.pow(number, 2) + "\n";
         }
+        return result;
     }
 
-    void sumNFirst(int n)   {
+    int sumNFirst(int n) {
         int sum = 0;
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             sum += i;
         }
-        System.out.println(sum);
+        return sum;
     }
 
-    void sumNFirstOdd(int n) {
+    int sumNFirstOdd(int n) {
         int sum = 0;
         for (int i = 1; i <= n; i++) {
             int number = ((i * 2) - 1);
             sum += number;
         }
-        System.out.println(sum);
+        return sum;
     }
 
-    void sumNFirstMultiplicativeInverse(int n) {
+    double sumNFirstMultiplicativeInverse(int n) {
         double sum = 0;
         for (int i = 1; i <= n; i++) {
             sum += (1 / (double) i);
         }
-        System.out.println(sum);
+        return sum;
     }
 
-    void powerOfTwoTable() {
+    String powerOfTwoTable() {
+        String result = "";
         for (int i = 0; i <= 10; i++) {
             int number = (int) Math.pow(2, i);
-            System.out.printf("2^%d = %d \n", i, number);
+            result += "2^" + i + " = " + number + "\n";
         }
+        return result;
     }
 
-    int factorial(int number) {
+    int factorial(int n) {
         int result = 1;
-        for (int i = 1; i <= number; i++) {
+        for (int i = 1; i <= n; i++) {
             result = result * i;
         }
         return result;
     }
 
-    void function() {
+    String function() {
+        String result = "";
         for (double i = -2; i <= 2; i += 0.25) {
-            double result = ((-2.4 * (Math.pow(i, 2))) + (5 * i) - 3);
-            System.out.println("f(" + i + ") = " + result);
+            double function = ((-2.4 * (Math.pow(i, 2))) + (5 * i) - 3);
+            result += "f(" + i + ") = " + function + "\n";
         }
+        return result;
     }
 
-    void arithmeticMean4Random10() {
-        int arithmeticMeanSum = 0;
+    Pair<ArrayList<Integer>, Double> random10() {
+        ArrayList<Integer> random10 = new ArrayList<Integer>();
         for (int i = 0; i < 10; i++) {
-            arithmeticMeanSum += (int) (Math.random() * 10);
+            random10.add((int) (Math.random() * 10));
         }
+        int arithmeticMeanSum = random10.stream().mapToInt(Integer::intValue).sum();
         double arithmeticMean = (double) arithmeticMeanSum / 10;
-        System.out.println(arithmeticMean);
+        return new Pair<>(random10, arithmeticMean);
     }
 
     String isNumberPrime(int number) {
+        String result = "";
         boolean prime = true;
         for (int i = 2; i <= number / 2; ++i) {
             if (number % i == 0) {
@@ -92,6 +104,7 @@ public class Student {
         } else {
             primeOdd = " is not prime";
         }
-        return primeOdd;
+        result = number + primeOdd + "\n";
+        return result;
     }
 }
