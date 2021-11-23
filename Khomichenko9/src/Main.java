@@ -38,12 +38,12 @@ public class Main {
             case "4":
                 System.out.print("Enter <<n>> for calculate sum n first positive odd integers: ");
                 n = scanner.nextInt();
-                System.out.println("Sum "+n+" first positive odd integers = " + student.sumNFirstOdd(n));
+                System.out.println("Sum " + n + " first positive odd integers = " + student.sumNFirstOdd(n));
                 break;
             case "5":
                 System.out.print("Enter <<n>> for calculate sum n first multiplicative inverses: ");
                 n = scanner.nextInt();
-                System.out.println("Sum "+n+" first Multiplicative inverses = " + student.sumNFirstMultiplicativeInverse(n));
+                System.out.println("Sum " + n + " first Multiplicative inverses = " + student.sumNFirstMultiplicativeInverse(n));
                 break;
             case "6":
                 System.out.println(student.powerOfTwoTable());
