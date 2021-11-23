@@ -136,7 +136,7 @@ public class Test {
             test = false;
         return test;
     }
-    void extraMain(){
+    void TestingAllMethods(){
         Test test = new Test();
         System.out.println("The test PrintStudent10Times was successful: " + test.testPrintStudent10Times());
         System.out.println("The test SquaresTable was successful: " + test.testSquaresTable());
@@ -151,15 +151,6 @@ public class Test {
     }
     public static void main(String[] args) {
         Test test = new Test();
-        System.out.println("The test PrintStudent10Times was successful: " + test.testPrintStudent10Times());
-        System.out.println("The test SquaresTable was successful: " + test.testSquaresTable());
-        System.out.println("The test testSumNFirst was successful: " + test.testSumNFirst());
-        System.out.println("The test testSumNFirstOdd was successful: " + test.testSumNFirstOdd());
-        System.out.println("The test sumNFirstMultiplicativeInverse was successful: " + test.testSumNFirstMultiplicativeInverse());
-        System.out.println("The test testPowerOfTwoTable was successful: " + test.testPowerOfTwoTable());
-        System.out.println("The test testFactorial was successful: " + test.testFactorial());
-        System.out.println("The test testFunction was successful: " + test.testFunction());
-        System.out.println("The test testArithmeticMean4Random10 was successful: " + test.testArithmeticMean4Random10());
-        System.out.println("The test testisNumberPrime was successful: " + test.testisNumberPrime());
+        test.TestingAllMethods();
     }
 }

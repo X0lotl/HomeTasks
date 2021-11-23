@@ -14,8 +14,8 @@ public class Main {
                 "What method do you want to do? (use <<q>> to exit the program and <<test>> to run Test class)\n" +
                         "(1 - print student first- and lastnames 10 times)\n" +
                         "(2 - print the table of squares of first 5 odd numbers)\n" +
-                        "(3 - print the sum of first n natural numbers)\n" +
-                        "(4 - print the sum of first n odd natural numbers)\n" +
+                        "(3 - print the sum of first n positive integers numbers)\n" +
+                        "(4 - print the sum of first n positive odd integers numbers)\n" +
                         "(5 - print the sum of first n multiplicative inverses)\n" +
                         "(6 - print the table of powers of 2 from 0 to 10)\n" +
                         "(7 - print the factorial of number n)\n" +
@@ -38,12 +38,12 @@ public class Main {
             case "4":
                 System.out.print("Enter <<n>> for calculate sum n first positive odd integers: ");
                 n = scanner.nextInt();
-                System.out.println("Sum n first positive odd integers = " + student.sumNFirstOdd(n));
+                System.out.println("Sum "+n+" first positive odd integers = " + student.sumNFirstOdd(n));
                 break;
             case "5":
-                System.out.print("Enter <<n>> for calculate sum n first Multiplicative inverse: ");
+                System.out.print("Enter <<n>> for calculate sum n first multiplicative inverses: ");
                 n = scanner.nextInt();
-                System.out.println("Sum n first Multiplicative inverse = " + student.sumNFirstMultiplicativeInverse(n));
+                System.out.println("Sum "+n+" first Multiplicative inverses = " + student.sumNFirstMultiplicativeInverse(n));
                 break;
             case "6":
                 System.out.println(student.powerOfTwoTable());
@@ -68,7 +68,7 @@ public class Main {
                 break;
             case "test":
                 Test test = new Test();
-                test.extraMain();
+                test.TestingAllMethods();
         }
     }
 }
