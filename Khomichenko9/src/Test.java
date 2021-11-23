@@ -3,6 +3,8 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 
 public class Test {
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RED = "\u001B[31m";
     Student student = new Student("Danil", "Khomichenko");
     public boolean test = true;
 
@@ -129,7 +131,7 @@ public class Test {
         return test;
     }
 
-    boolean testisNumberPrime() {
+    boolean testIsNumberPrime() {
         String result = "8191 is prime\n";
         String resultFromMethod = student.isNumberPrime(8191);
         if (!result.equals(resultFromMethod))
@@ -137,18 +139,45 @@ public class Test {
         return test;
     }
 
+    String outputColorChanger(boolean test) {
+        String outputColor = ANSI_GREEN;
+        if (!test)
+            outputColor = ANSI_RED;
+        return outputColor;
+    }
+
     void testAllMethods() {
         Test test = new Test();
-        System.out.println("The test PrintStudent10Times was successful: " + test.testPrintStudent10Times());
-        System.out.println("The test SquaresTable was successful: " + test.testSquaresTable());
-        System.out.println("The test testSumNFirst was successful: " + test.testSumNFirst());
-        System.out.println("The test testSumNFirstOdd was successful: " + test.testSumNFirstOdd());
-        System.out.println("The test sumNFirstMultiplicativeInverse was successful: " + test.testSumNFirstMultiplicativeInverse());
-        System.out.println("The test testPowerOfTwoTable was successful: " + test.testPowerOfTwoTable());
-        System.out.println("The test testFactorial was successful: " + test.testFactorial());
-        System.out.println("The test testFunction was successful: " + test.testFunction());
-        System.out.println("The test testArithmeticMean4Random10 was successful: " + test.testArithmeticMean4Random10());
-        System.out.println("The test testisNumberPrime was successful: " + test.testisNumberPrime());
+        String ANSI_COLOR;
+        ANSI_COLOR = test.outputColorChanger(test.testPrintStudent10Times());
+        System.out.println(ANSI_COLOR + "The test PrintStudent10Times was successful:" + test.testPrintStudent10Times());
+
+        ANSI_COLOR = test.outputColorChanger(test.testSquaresTable());
+        System.out.println(ANSI_COLOR + "The test SquaresTable was successful: " + test.testSquaresTable());
+
+        ANSI_COLOR = test.outputColorChanger(test.testSumNFirst());
+        System.out.println(ANSI_COLOR + "The test SumNFirst was successful: " + test.testSumNFirst());
+
+        ANSI_COLOR = test.outputColorChanger(test.testSumNFirstOdd());
+        System.out.println(ANSI_COLOR + "The test SumNFirstOdd was successful: " + test.testSumNFirstOdd());
+
+        ANSI_COLOR = test.outputColorChanger(test.testSumNFirstMultiplicativeInverse());
+        System.out.println(ANSI_COLOR + "The test SumNFirstMultiplicativeInverse was successful: " + test.testSumNFirstMultiplicativeInverse());
+
+        ANSI_COLOR = test.outputColorChanger(test.testPowerOfTwoTable());
+        System.out.println(ANSI_COLOR + "The test PowerOfTwoTable was successful: " + test.testPowerOfTwoTable());
+
+        ANSI_COLOR = test.outputColorChanger(test.testFactorial());
+        System.out.println(ANSI_COLOR + "The test Factorial was successful: " + test.testFactorial());
+
+        ANSI_COLOR = test.outputColorChanger(test.testFunction());
+        System.out.println(ANSI_COLOR + "The test Function was successful: " + test.testFunction());
+
+        ANSI_COLOR = test.outputColorChanger(test.testArithmeticMean4Random10());
+        System.out.println(ANSI_COLOR + "The test ArithmeticMean4Random10 was successful: " + test.testArithmeticMean4Random10());
+
+        ANSI_COLOR = test.outputColorChanger(test.testIsNumberPrime());
+        System.out.println(ANSI_COLOR + "The test IsNumberPrime was successful: " + test.testIsNumberPrime());
     }
 
     public static void main(String[] args) {
