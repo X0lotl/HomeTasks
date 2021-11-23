@@ -28,16 +28,16 @@ public class Student {
         return result;
     }
 
-    int sumNFirst(int n) {
-        int sum = 0;
+    long sumNFirst(int n) {
+        long sum = 0;
         for (int i = 1; i <= n; i++) {
             sum += i;
         }
         return sum;
     }
 
-    int sumNFirstOdd(int n) {
-        int sum = 0;
+    long sumNFirstOdd(int n) {
+        long sum = 0;
         for (int i = 1; i <= n; i++) {
             int number = ((i * 2) - 1);
             sum += number;
@@ -62,8 +62,8 @@ public class Student {
         return result;
     }
 
-    int factorial(int n) {
-        int result = 1;
+    long factorial(int n) {
+        long result = 1;
         for (int i = 1; i <= n; i++) {
             result *= i;
         }

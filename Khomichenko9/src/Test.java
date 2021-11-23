@@ -42,7 +42,7 @@ public class Test {
     boolean testSumNFirst() {
         test = true;
         int result = 2080;
-        int resultFromMethod = student.sumNFirst(64);
+        long resultFromMethod = student.sumNFirst(64);
         if (result != resultFromMethod)
             test = false;
         return test;
@@ -51,7 +51,7 @@ public class Test {
     boolean testSumNFirstOdd() {
         test = true;
         int result = 4096;
-        int resultFromMethod = student.sumNFirstOdd(64);
+        long resultFromMethod = student.sumNFirstOdd(64);
         if (result != resultFromMethod)
             test = false;
         return test;
@@ -88,7 +88,7 @@ public class Test {
     boolean testFactorial() {
         test = true;
         int result = 362880;
-        int resultFromMethod = student.factorial(9);
+        long resultFromMethod = student.factorial(9);
         if (result != resultFromMethod)
             test = false;
         return test;
