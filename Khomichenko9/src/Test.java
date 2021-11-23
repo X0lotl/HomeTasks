@@ -136,7 +136,7 @@ public class Test {
             test = false;
         return test;
     }
-    void TestingAllMethods(){
+    void testAllMethods(){
         Test test = new Test();
         System.out.println("The test PrintStudent10Times was successful: " + test.testPrintStudent10Times());
         System.out.println("The test SquaresTable was successful: " + test.testSquaresTable());
@@ -151,6 +151,6 @@ public class Test {
     }
     public static void main(String[] args) {
         Test test = new Test();
-        test.TestingAllMethods();
+        test.testAllMethods();
     }
 }

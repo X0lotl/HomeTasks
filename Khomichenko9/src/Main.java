@@ -68,7 +68,7 @@ public class Main {
                 break;
             case "test":
                 Test test = new Test();
-                test.TestingAllMethods();
+                test.testAllMethods();
         }
     }
 }
