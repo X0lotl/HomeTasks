@@ -16,8 +16,8 @@ public class CaesarDecoding {
     private static String decodeString(String input, int alphabetShift) {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < input.length() - 1; i++) {
-            char encodedChar = (char) (input.charAt(i) - alphabetShift);
-            output.append(encodedChar);
+            char decodedChar = (char) (input.charAt(i) - alphabetShift);
+            output.append(decodedChar);
         }
         return output.toString();
     }
